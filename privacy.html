@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سياسة الخصوصية | Obadah</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon Icons -->
+<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+<link rel="manifest" href="images/site.webmanifest" />
+
+  <style>
+    .privacy-container {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      direction: rtl;
+      text-align: start;
+    }
+
+    .privacy-container h1 {
+      color: #4b0082;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    .privacy-container h3 {
+      margin-top: 30px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .privacy-container p,
+    .privacy-container li {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .privacy-container ul {
+      padding-right: 20px;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #4b0082;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-button:hover {
+      background-color: #370062;
+    }
+
+    @media (max-width: 600px) {
+      .privacy-container {
+        margin: 120px 15px 40px;
+        padding: 15px;
+      }
+
+      .back-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 14px;
+        font-size: 14px;
+      }
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    .dark-mode a.back-button {
+      background-color: #bb86fc;
+      color: #121212;
+    }
+
+    .dark-mode a.back-button:hover {
+      background-color: #985eff;
+    }
+
+    .dark-mode .privacy-container {
+      background: rgba(30, 30, 30, 0.9);
+      color: #ddd;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+
+    .dark-mode .privacy-container h1,
+    .dark-mode .privacy-container h3 {
+      color: #bb86fc;
+    }
+
+    .dark-mode .privacy-container p {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- زر العودة -->
+  <a href="index.html" class="back-button">⬅ العودة</a>
+
+  <!-- محتوى سياسة الخصوصية -->
+  <section class="privacy-container" id="privacy-container">
+    <!-- سيتم ترتيب النصوص ديناميكياً هنا -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Obadah Official - جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    // تفعيل الوضع الليلي إذا كان مخزن
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // المحتوى العربي الجديد
+    const arabicContent = `
+      <div id="privacy-ar">
+        <h1>سياسة الخصوصية</h1>
+        <p>نحن نحترم خصوصيتك، ونودّ إعلامك أن موقعنا لا يقوم بجمع أي معلومات شخصية من الزوار.</p>
+
+        <h3>1. عدم جمع البيانات:</h3>
+        <p>لا يطلب هذا الموقع أي معلومات تعريف شخصية مثل الاسم أو البريد الإلكتروني، ولا يحتوي على نماذج تسجيل أو دخول أو تعليقات.</p>
+
+        <h3>2. روابط خارجية:</h3>
+        <p>يحتوي الموقع على روابط تؤدي إلى منصات خارجية مثل YouTube، Instagram، وغيرها. عند النقر على هذه الروابط، تنطبق عليك سياسات الخصوصية الخاصة بتلك المواقع.</p>
+
+        <h3>3. ملفات تعريف الارتباط (Cookies) و Google Analytics:</h3>
+        <p>نستخدم Google Analytics لمساعدتنا على فهم كيفية تفاعل الزوار مع الموقع. يقوم Google Analytics بجمع بيانات غير شخصية مثل نوع المتصفح، مدة الجلسة، الصفحات التي تمت زيارتها، ويتم ذلك باستخدام ملفات تعريف الارتباط (Cookies). لا نشارك هذه البيانات مع أي طرف ثالث.</p>
+
+
+        <h3>4. التحديثات:</h3>
+        <p>قد يتم تعديل هذه السياسة في حال تم إضافة ميزات جديدة للموقع مستقبلًا. أي تغييرات مهمة سيتم توضيحها هنا.</p>
+
+        <p style="margin-top: 30px;"><strong>📩 التواصل:</strong><br>لأي استفسار بخصوص الخصوصية، يمكنك التواصل عبر البريد الإلكتروني التالي:<br>QR7QR15@gmail.com</p>
+      </div>
+    `;
+
+    // المحتوى الإنجليزي المطابق
+    const englishContent = `
+      <div id="privacy-en">
+        <h1>Privacy Policy</h1>
+        <p>.We respect your privacy and would like to inform you that our website does not collect any personal information from visitors</p>
+
+        <h3>: No Data Collection</h3>
+        <p>.This website does not request any personally identifiable information such as name or email address, and it does not include registration forms, login, or comments</p>
+
+        <h3>: External Links</h3>
+        <p>.The website contains links to external platforms such as YouTube, Instagram, and others. When you click on these links, the privacy policies of those websites apply to you</p>
+
+        <h3>: Cookies and Google Analytics</h3>
+        <p>We use Google Analytics to help us understand how visitors interact with the website. Google Analytics collects non-personal data such as browser type, session duration, and visited pages using cookies. We do not share this data with any third party.</p>
+
+        <h3>: Updates</h3>
+        <p>.This policy may be updated if new features are added to the website in the future. Any important changes will be explained here</p>
+
+        <p style="margin-top: 30px;"><strong>Contact: 📩</strong><br>If you have any questions regarding privacy, you can contact us via the following email:<br>QR7QR15@gmail.com</p>
+      </div>
+    `;
+
+    // تحديد اللغة وعرض المحتوى المناسب
+    const lang = localStorage.getItem("language") || document.documentElement.lang || 'ar';
+    const container = document.getElementById('privacy-container');
+
+    if (lang.startsWith('en')) {
+      document.documentElement.dir = 'ltr';
+      container.style.textAlign = 'left';
+      container.innerHTML = englishContent;
+    } else {
+      document.documentElement.dir = 'rtl';
+      container.style.textAlign = 'start';
+      container.innerHTML = arabicContent;
+    }
+  </script>
+</body>
+</html>
