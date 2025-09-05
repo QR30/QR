@@ -1,0 +1,81 @@
+.privacy-container {
+  max-width: 900px;
+  margin: 100px auto 60px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  direction: rtl;
+  text-align: start;
+}
+
+.privacy-container h1 {
+  color: #4b0082;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.privacy-container h3 {
+  margin-top: 30px;
+  color: #333;
+  font-size: 20px;
+}
+
+.privacy-container p,
+.privacy-container li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.privacy-container ul {
+  padding-right: 20px;
+}
+
+
+.back-button:hover {
+  background-color: #370062;
+}
+
+@media (max-width: 600px) {
+.privacy-container {
+  margin: 120px 15px 40px;
+  padding: 15px;
+}
+
+.back-button {
+    top: 10px;
+    left: 10px;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.dark-mode a.back-button {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+.dark-mode a.back-button:hover {
+  background-color: #985eff;
+}
+
+.dark-mode .privacy-container {
+  background: rgba(30, 30, 30, 0.9);
+  color: #ddd;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.dark-mode .privacy-container h1,
+.dark-mode .privacy-container h3 {
+  color: #bb86fc;
+}
+
+.dark-mode .privacy-container p {
+  color: #fff;
+}
