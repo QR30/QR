@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // انتقل لصفحة اللغة الأخرى
         const currentLang = document.documentElement.lang;
         if (currentLang === "ar") {
-          window.location.href = "index_en.html"; // تأكد أن هذه الصفحة موجودة
+          window.location.href = "index.html"; // تأكد أن هذه الصفحة موجودة
         } else {
           window.location.href = "index_ar.html";
         }
