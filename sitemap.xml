@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://qr30.github.io/QR/</loc>
+    <lastmod>2025-09-13</lastmod>
     <priority>1.0</priority>
   </url>
+
+  <!-- مثال: لو عندك صفحة الأسئلة الشائعة -->
+  <url>
+    <loc>https://qr30.github.io/QR/Faq_ar.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- مثال: سياسة الخصوصية -->
+  <url>
+    <loc>https://qr30.github.io/QR/Privacy_policy_ar.html</loc>
+    <lastmod>2025-09-13</lastmod>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>

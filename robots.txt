@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qr30.github.io/QR/sitemap.xml
