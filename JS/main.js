@@ -148,18 +148,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const translateBtn = document.getElementById("translateBtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const translateBtn = document.getElementById("translateBtn");
 
-    if (translateBtn) {
-      translateBtn.addEventListener("click", () => {
-        // انتقل لصفحة اللغة الأخرى
-        const currentLang = document.documentElement.lang;
-        if (currentLang === "ar") {
-          window.location.href = "index.html"; // تأكد أن هذه الصفحة موجودة
-        } else {
-          window.location.href = "index_ar.html";
-        }
-      });
-    }
-  });
+  if (translateBtn) {
+    translateBtn.addEventListener("click", () => {
+      const currentFile = window.location.pathname;
+
+      if (currentFile.includes("index_ar.html")) {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = "index_ar.html";
+      }
+    });
+  }
+});

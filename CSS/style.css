@@ -270,20 +270,30 @@ body.dark-mode footer .copyright-text {
 
 /* ==== استجابة الجوال ==== */
 @media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 10px;
+  .header-container {
+    flex-direction: row; /* ✅ خليها صف أفقي */
+    align-items: center; /* ✅ توسيط العناصر رأسياً */
+    justify-content: space-between; /* ✅ توزيع العناصر بشكل متوازن */
   }
 
-  .header-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .nav-list {
+    flex-direction: row; /* ✅ خلي روابط التنقل جنب بعض */
+    flex-wrap: wrap;
+    gap: 15px; /* تقليل المسافات */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 30px;
+    right: 10px;
+    top: 10px;
   }
 
   .nav-link {
-    font-size: 15px;
-    padding: 8px;
+    font-size: 13px;
+    padding: 5px 8px;
+    gap: 3px;
   }
 }
 
