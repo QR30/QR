@@ -37,15 +37,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- تهيئة VanillaTilt (إن وجد) ---
-  if (typeof VanillaTilt !== "undefined") {
-    VanillaTilt.init(document.querySelectorAll(".tilt-effect"), {
+// --- تهيئة VanillaTilt فقط على غير الجوال ---
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 768;
+}
+
+if (!isMobileDevice() && typeof VanillaTilt !== "undefined") {
+  const elements = document.querySelectorAll(".tilt-effect");
+  if (elements.length > 0) {
+    VanillaTilt.init(elements, {
       max: 15,
       speed: 400,
       glare: true,
       "max-glare": 0.3,
     });
   }
+}
+
 
   // --- تهيئة particles.js (إن وجد) ---
   if (typeof particlesJS !== "undefined") {
