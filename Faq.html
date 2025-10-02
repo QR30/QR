@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Obadah Mohammad Adnan</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="CSS/style.css"/>
+  <link rel="stylesheet" href="CSS/faq.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="Images/android-chrome-512x512.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="Images/android-chrome-512x512.png" alt="Obadah Mohammad Adnan Logo" class="logo-img" />
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="Faq.html" class="nav-link active"><i class="fa fa-question-circle"></i> FAQ</a></li>
+          <li><a  href="support.html" class="nav-link"><i class="fa fa-heart"></i> Support Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <p>Here you'll find answers to the most common questions about Obadah Mohammad Adnan's channel.</p>
+
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Are the recitations your own voice</h3><p>Yes, all recitations are in my own voice, Alhamdulillah.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> How can I contact the channel's management</h3><p>You can contact me via the "Contact Us" page, email, or Instagram.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Can I share the videos with others</h3><p>Yes, you may share the videos as long as you don't modify them.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> What Qira'ah (recitation style) do you use</h3><p>I mostly recite in Hafs 'an 'Asim, and may post other Qira'at in the future, In shaa Allah.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Do you accept requests for specific verses or surahs</h3><p>Yes, I'm happy to receive your requests via comments or Instagram.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> How often do you upload new videos</h3><p>I aim to upload daily. It's recommended to turn on the notification bell to stay updated.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Do you do live streams</h3><p>There may be live streams in the near future, In shaa Allah, for recitations or reflections.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Is the content suitable for memorization and review</h3><p>Yes, the recitations are clear and calm, ideal for memorizing and reviewing.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> How can I support you</h3><p>1- Subscribe to the channel, turn on notifications, and engage with the content.<br>2- Click the "Support Me" button to visit my Patreon page.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Can I use your recitations in my videos or projects</h3><p>Yes, under two conditions:<br>1. No editing or distortion.<br>2. No commercial use without permission.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Do you record in a professional studio</h3><p>Not in a professional studio, but I use good equipment and always strive to improve audio quality.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Are there official social media accounts</h3><p>Yes, you can find my verified accounts on the homepage. Beware of fake pages.</p></div>
+      <div class="faq-item"><h3><i class="fas fa-question-circle"></i> Is the channel affiliated with any religious organization</h3><p>No, the channel is personal and operated by me, Obadah Mohammad Adnan, in accordance with Islamic guidelines.</p></div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+    <p class="copyright-text">© 2025 Obadah Mohammad Adnan - All rights reserved</p>
+    <p>
+      <a href="Privacy_policy.html">Privacy Policy</a>
+    </p>
+    <p>
+      <a href="https://www.instagram.com/obadah.official/" target="_blank" class="social-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/obadah.official.2025" target="_blank" class="social-icon">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="https://t.me/obadah_official" target="_blank" class="social-icon">
+        <i class="fa-brands fa-telegram"></i>
+      </a>
+      <a href="https://www.tiktok.com/@obadah_official10" target="_blank" class="social-icon">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <a href="https://www.youtube.com/@obadah_official" target="_blank" class="social-icon">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </p>
+  </footer>
+
+  <!-- ✅ سكريبت تفاعل الأسئلة -->
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove('open');
+        });
+        item.classList.toggle('open');
+      });
+    });
+
+   // تفعيل الوضع الليلي إذا كان مخزن في localStorage
+   if (localStorage.getItem('theme') === 'dark') {
+     document.body.classList.add('dark-mode');
+   }
+  </script>
+
+</body>
+</html>

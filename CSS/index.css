@@ -1,0 +1,313 @@
+/* ======= الحاوية الرئيسية ======= */
+main {
+  padding: 20px;
+}
+
+/* ======= العناوين ======= */
+h1.main-title {
+  margin-top: 15px;
+  font-size: 30px;
+  color: #4b0082;
+  line-height: 1.3;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #0000006c;
+}
+
+.name-highlight {
+  font-size: 32px;
+  color: #4b0082;
+  text-shadow: 2px 2px 5px #bbb;
+}
+
+.dark-mode .name-highlight {
+  color: #fff;
+  text-shadow: 0 0 8px #d6b3ff;
+}
+
+/* ======= الشعار ======= */
+.logo {
+  width: 140px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* ======= تأثير توهج النجوم ======= */
+.star-glow {
+  display: inline-block;
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 8px #fff; }
+  50% { text-shadow: 0 0 20px #d6b3ff; }
+}
+
+/* ======= أيقونات التواصل الاجتماعي ======= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px 20px;
+}
+
+.icon-container {
+  width: 100px;
+  text-align: center;
+}
+
+.icon-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-container img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icon-label {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ======= ألوان الوضع الليلي للنصوص ======= */
+.dark-mode .icon-label,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode ul li a {
+  color: #f2f2f2;
+}
+
+/* ======= إعدادات الإطار iframe ======= */
+iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 340px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #888;
+  margin-top: 20px;
+  border: none;
+}
+
+/* ======= صناديق المحتوى ======= */
+.custom-box {
+  background: #ffffff;
+  color: #4b0082;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  line-height: 1.7;
+  direction: rtl;
+}
+
+.box-header {
+  background-color: #4b0082;
+  text-align: center;
+  font-size: 1.8em;
+  max-width: 600px;
+}
+
+.box-video-title {
+  background: #4b0082;
+  color: #4b0082;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 45px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  text-shadow: 1px 1px 3px #00000050;
+  max-width: 300px;
+  line-height: 1.7;
+  direction: rtl;
+}
+
+.box-about,
+.box-contact {
+  color: #4b0082;
+  text-shadow: 1px 1px 3px #00000050;
+  font-size: 1.1em;
+}
+
+.box-contact {
+  border-radius: 45px;
+  max-width: 450px;
+}
+
+/* ======= الوضع الليلي لصناديق المحتوى ======= */
+.dark-mode .box-header,
+.dark-mode .box-video-title,
+.dark-mode .box-about,
+.dark-mode .box-contact {
+  background: #4b0082;
+  color: white;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* ======= تأثير الميلان ======= */
+.tilt-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.tilt-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgb(255, 255, 255) 0%, rgba(255,255,255,0.05) 60%, rgba(255,255,255,0) 100%);
+  transform: rotate(25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(100%) rotate(25deg); }
+}
+
+/* ======= خلفية الجزيئات ======= */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: auto !important;
+}
+
+/* ======= تأثير الزجاج ======= */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .glass-effect {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* ======= عدادات الإحصائيات ======= */
+.counters-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.counters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.counter-box {
+  flex: 1 1 200px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.counter {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ======= التصميم المتجاوب ======= */
+@media (max-width: 600px) {
+  .counter-box {
+    min-width: 160px;
+    flex-shrink: 0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    overflow: visible; /* السماح بعرض المحتوى */
+  }
+
+  /* تعديل ارتفاع iframe */
+  iframe {
+    height: 220px;
+  }
+
+  /* تعديل حجم أيقونات التواصل */
+  .icon-container {
+    width: 70px;
+  }
+
+  .icon-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* تعديل حجم العناوين */
+  h1.main-title {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  .box-video-title {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* تعديل حاوية العدادات */
+  .counters-container {
+    display: flex;
+    flex-wrap: nowrap; /* عشان تكون صف واحد قابل للتمرير */
+    overflow-x: auto;  /* يسمح بالتمرير الأفقي */
+    padding: 10px;
+    gap: 15px; /* تقليل المسافة بين العدادات */
+  }
+
+
+  .counter-box {
+    min-width: 160px;
+    flex-shrink: 0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+  }
+
+  /* تعديل هوامش قسم الإنجازات */
+  #achievements {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  /* تعديل حجم عنوان الصندوق */
+  .box-header {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  /* تعديل نص قسم عني */
+  #about {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

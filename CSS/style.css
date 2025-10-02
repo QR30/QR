@@ -1,0 +1,325 @@
+/* ==== إعدادات عامة ==== */
+* {
+  box-sizing: border-box; /* لجعل الحشو والحدود داخل الأبعاد */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط عربي مدعوم + خطوط احتياطية */
+  color: #370047; /* لون النص */
+  direction: rtl; /* دعم اللغة العربية */
+  line-height: 1.6; /* ارتفاع الأسطر */
+  padding-top: 90px; /* مساحة لترك مكان للهيدر الثابت */
+  margin: 0;
+  background: linear-gradient(-45deg, #e0c3fc, #8ec5fc, #d3bfff, #b6dcff); /* خلفية متدرجة متحركة */
+  background-size: 400% 400%; /* حجم كبير للحركة */
+  animation: gradientShift 15s ease infinite; /* أنميشن للخلفية */
+  text-align: center;
+  overflow-x: hidden; /* منع التمرير الجانبي */
+  transition: background 1s ease, color 1s ease; /* انتقال سلس عند تغيير اللون أو الخلفية */
+}
+
+/* ==== أنميشن الخلفية ==== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==== الحاويات ==== */
+.container {
+  max-width: 1200px; /* عرض أقصى */
+  margin: auto; /* توسيط */
+  padding: 0 20px; /* هامش داخلي جانبي */
+}
+
+/* ==== الهيدر ==== */
+header {
+  background-color: #481969; /* لون الهيدر */
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  position: fixed; /* تثبيت في الأعلى */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* فوق بقية العناصر */
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.logo-img {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 50px;
+  height: auto;
+}
+
+/* ==== قائمة التنقل ==== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.dropdown:hover > .nav-link {
+  background-color: #510053; /* لون خلفية عند المرور */
+  color: #ffffff;
+}
+
+.nav-link.active {
+  background-color: #510053;
+  color: #ffffff;
+  box-shadow: 0 0 10px #ffffff; /* توهج خفيف */
+  pointer-events: none; /* منع الضغط */
+}
+
+/* ==== Dropdown ==== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: " ▼"; /* سهم للأسفل */
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #4b0082; /* خلفية القائمة المنسدلة */
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  min-width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* نزول خفيف */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1200;
+}
+
+.dropdown-menu li a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-weight: normal;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+  text-align: right;
+  direction: rtl;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #370062;
+  color: #d6b3ff;
+}
+
+.dropdown:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* عرض القائمة */
+}
+
+/* ==== الفوتر ==== */
+footer {
+  color: #eee;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer .copyright-text {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* ==== الوضع الليلي ==== */
+body.dark-mode {
+  background: linear-gradient(-45deg, #000531, #2b003d, #090058, #000000); /* خلفية داكنة */
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  color: #000000; /* نص فاتح */
+}
+
+body.dark-mode .faq-section h2,
+body.dark-mode .faq-section p {
+  color: #fff;
+}
+
+body.dark-mode .faq-item h3,
+body.dark-mode .faq-item p {
+  color: #370047 !important;
+}
+
+body.dark-mode header {
+  background-color: #2b003d;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .dropdown-menu li a {
+  color: #eee;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .dropdown-menu li a:hover {
+  background-color: #510053;
+  color: #fff;
+}
+
+body.dark-mode footer .copyright-text {
+  color: #fff;
+}
+
+.dark-mode #contact a,
+.dark-mode .privacy-link {
+  color: #fff !important;
+}
+
+/* ==== الأزرار العلوية (ثيم/ترجمة) ==== */
+.top-buttons {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+#themeToggle,
+#translateBtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #4b0082;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.4s, transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#themeToggle:hover,
+#translateBtn:hover {
+  background-color: #370062;
+  transform: scale(1.1) rotate(15deg);
+}
+
+.dark-mode #themeIcon {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+/* ==== الأيقونات ==== */
+.social-icon {
+  font-size: 18px;
+  margin: 0 6px;
+  color: #7f0aad;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+}
+
+/* ==== استجابة الجوال ==== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row; /* ✅ خليها صف أفقي */
+    align-items: center; /* ✅ توسيط العناصر رأسياً */
+    justify-content: space-between; /* ✅ توزيع العناصر بشكل متوازن */
+  }
+
+  .nav-list {
+    flex-direction: row; /* ✅ خلي روابط التنقل جنب بعض */
+    flex-wrap: wrap;
+    gap: 15px; /* تقليل المسافات */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-img {
+    width: 30px;
+    right: 10px;
+    top: 10px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 5px 8px;
+    gap: 3px;
+  }
+}
+
+@media (max-width: 600px) {
+  .social-icons {
+    gap: 15px;
+  }
+
+  .icon-container {
+    width: 70px;
+  }
+
+  .icon-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  iframe {
+    height: 240px;
+  }
+}
+
+/* ==== حل مشكلة الهيدر بيروح على اليسار بالجوال
+هذا يمنع الصفحة من التمدد الجانبي بشكل قاطع، حتى لو في عنصر حاول يكسر التصميم. ==== */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

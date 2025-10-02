@@ -1,0 +1,78 @@
+/* تنسيق قسم الأسئلة */
+.faq-section {
+  padding: 40px 20px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* العنصر الفردي للسؤال */
+.faq-item {
+  background-color: #f1f1f1;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-right: 5px solid #630177;
+}
+
+.faq-item:hover {
+  background-color: #e6e6e6;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #481969;
+}
+
+.faq-item p {
+  margin-top: 10px;
+  display: none;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* عند فتح السؤال */
+.faq-item.open p {
+  display: block;
+}
+
+/* أيقونة السؤال */
+.faq-item i {
+  color: #481969;
+}
+
+/* استجابة للهاتف */
+@media (max-width: 600px) {
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .faq-item {
+    padding: 15px;
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-item p {
+    font-size: 15px;
+  }
+}
